@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive Index</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            th {
+                position: sticky;
+                top: 0;
+                background-color: #007BFF;
+                color: white;
+            }
+            td {
+                border: none;
+                padding: 10px;
+                position: relative;
+            }
+            td::before {
+                content: attr(data-label);
+                font-weight: bold;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Google Drive Index</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama File</th>
+                    <th>Deskripsi</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Nama File">Proposal_2025.pdf</td>
+                    <td data-label="Deskripsi">Proposal bisnis untuk tahun 2025</td>
+                    <td data-label="Link"><a href="https://drive.google.com/file/d/abc123/view" target="_blank">Lihat File</a></td>
+                </tr>
+                <tr>
+                    <td data-label="Nama File">Gambar_Logo.png</td>
+                    <td data-label="Deskripsi">Logo perusahaan versi terbaru</td>
+                    <td data-label="Link"><a href="https://drive.google.com/file/d/def456/view" target="_blank">Lihat File</a></td>
+                </tr>
+                <tr>
+                    <td data-label="Nama File">Video_Promo.mp4</td>
+                    <td data-label="Deskripsi">Video promosi produk terbaru</td>
+                    <td data-label="Link"><a href="https://drive.google.com/file/d/ghi789/view" target="_blank">Lihat File</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
